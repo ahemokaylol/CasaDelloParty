@@ -21,15 +21,17 @@ body {
   animation: ambientGlow 12s ease-in-out infinite;
 }
 
-/* CONTENT WIDTH */
+/* CONTENT WIDTH + STACKING FIX */
 body > *:not(.overlay) {
   max-width: 720px;
   margin-left: auto;
   margin-right: auto;
+  position: relative;
+  z-index: 1;
 }
 
 /* ===============================
-   BACKGROUND
+   BACKGROUND (SAFE)
 ================================ */
 .overlay img {
   position: fixed;
@@ -37,7 +39,7 @@ body > *:not(.overlay) {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  z-index: -2;
+  z-index: -3;
   opacity: 0.45;
 }
 
@@ -49,7 +51,7 @@ body > *:not(.overlay) {
     radial-gradient(circle at 20% 20%, rgba(255,180,120,0.25), transparent 40%),
     radial-gradient(circle at 80% 30%, rgba(180,120,255,0.25), transparent 45%),
     radial-gradient(circle at 50% 80%, rgba(255,120,180,0.2), transparent 40%);
-  z-index: -1;
+  z-index: -2;
 }
 
 .overlay::after {
@@ -59,18 +61,13 @@ body > *:not(.overlay) {
   background: rgba(0,0,0,0.55);
   z-index: -1;
 }
-/* FORCE CONTENT ABOVE BACKGROUND */
-body > *:not(.overlay) {
-  position: relative;
-  z-index: 1;
-}
 
-/* BACKGROUND MUST NOT BLOCK CONTENT */
 .overlay,
 .overlay::before,
 .overlay::after {
   pointer-events: none;
 }
+
 /* ===============================
    TYPOGRAPHY
 ================================ */
@@ -79,13 +76,14 @@ h1 {
   font-weight: 400;
   font-size: clamp(2.8rem, 6vw, 4rem);
   text-transform: uppercase;
-  letter-spacing: 0.12em; /* keep some air or it looks crushed */
+  letter-spacing: 0.12em;
   margin: 0.5em 0;
   line-height: 0.95;
   text-shadow:
     0 0 8px rgba(255,215,150,0.6),
     0 0 20px rgba(255,150,200,0.4);
 }
+
 /* TAGLINES */
 .tagline {
   font-size: 0.95rem;
@@ -100,7 +98,7 @@ h1 {
 }
 
 /* ===============================
-   LINKS (TEXT LINKS ONLY)
+   TEXT LINKS (NON-BUTTON)
 ================================ */
 a {
   color: #ffd27d;
@@ -115,7 +113,7 @@ a:hover {
 }
 
 /* ===============================
-   BUTTONS (LOCKED — DO NOT TOUCH)
+   BUTTONS (LOCKED & SAFE)
 ================================ */
 .calendar-btn {
   display: inline-block;
@@ -124,14 +122,16 @@ a:hover {
   background: linear-gradient(135deg, #ffd27d, #ff9fcf);
   color: #2b153f;
   text-decoration: none;
+  border: none;
+  border-bottom: none;            /* critical fix */
   border-radius: 999px;
   font-weight: 600;
   font-size: 0.9rem;
-  letter-spacing: 0.06em;  /* EXPLICIT */
+  letter-spacing: 0.06em;
   text-transform: uppercase;
   box-shadow: 0 8px 24px rgba(255,159,207,0.3);
   transition: all 0.25s ease;
-  font-family: 'Inter Tight', system-ui, sans-serif; /* locked */
+  font-family: 'Inter Tight', system-ui, sans-serif;
 }
 
 .calendar-btn:hover {
