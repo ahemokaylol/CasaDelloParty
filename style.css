@@ -59,7 +59,18 @@ body > *:not(.overlay) {
   background: rgba(0,0,0,0.55);
   z-index: -1;
 }
+/* FORCE CONTENT ABOVE BACKGROUND */
+body > *:not(.overlay) {
+  position: relative;
+  z-index: 1;
+}
 
+/* BACKGROUND MUST NOT BLOCK CONTENT */
+.overlay,
+.overlay::before,
+.overlay::after {
+  pointer-events: none;
+}
 /* ===============================
    TYPOGRAPHY
 ================================ */
