@@ -8,7 +8,7 @@
 
 body {
   margin: 0;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: 'Inter Tight', system-ui, sans-serif;
   color: #fff6e5;
   text-align: center;
   background: #1a1026;
@@ -61,27 +61,37 @@ body > *:not(.overlay) {
    TYPOGRAPHY
 ================================ */
 h1, h2, h3 {
-  font-family: 'Playfair Display', serif;
+ h1, h2, h3 {
+  font-family: 'Inter Tight', sans-serif;
+  letter-spacing: 0.12em;
 }
 
 h1 {
   font-weight: 700;
-  font-size: clamp(2.2rem, 5vw, 3rem);
+  font-size: clamp(2.1rem, 5vw, 2.8rem);
   text-transform: uppercase;
-  letter-spacing: 0.15em;
   margin: 0.6em 0;
   text-shadow:
-    0 0 8px rgba(255,215,150,0.6),
-    0 0 20px rgba(255,150,200,0.4);
+    0 0 6px rgba(255,215,150,0.5),
+    0 0 16px rgba(255,150,200,0.35);
 }
 
 /* TAGLINES */
-.tagline {
-  font-size: 0.8rem;        /* ⬅ smaller */
-  font-style: italic;
+.details p {
+  font-size: 1.1rem;
   letter-spacing: 0.04em;
-  opacity: 0.85;
-  margin: 0.4em 0;           /* ⬅ tighter spacing */
+}
+
+.tagline {
+  font-size: 0.9rem;
+  font-style: normal;
+  letter-spacing: 0.06em;
+  opacity: 0.8;
+  margin: 0.35em 0;
+}
+
+a {
+  letter-spacing: 0.08em;
 }
 
 /* ===============================
