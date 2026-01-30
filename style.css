@@ -87,16 +87,17 @@ h1 {
 /* ===============================
    SECTIONS / PANELS
 ================================ */
-.details,
 .music-section,
 .contact-section {
   margin-top: 2em;
-  padding: 1.5em;
-  background: rgba(0,0,0,0.35);
-  border-radius: 14px;
-  backdrop-filter: blur(6px);
 }
 
+.contact-section {
+  display: flex;
+  gap: 1em;
+  justify-content: center;
+  flex-wrap: wrap;
+}
 .details p {
   font-size: 1.05rem;
   margin: 0.6em 0;
