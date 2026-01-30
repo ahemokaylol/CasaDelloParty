@@ -1,11 +1,14 @@
 /* ===============================
-   GLOBAL RESET + BASE
+   GLOBAL RESET
 ================================ */
 * {
   box-sizing: border-box;
   text-transform: none !important;
 }
 
+/* ===============================
+   BASE
+================================ */
 body {
   margin: 0;
   font-family: 'Inter Tight', system-ui, sans-serif;
@@ -18,7 +21,7 @@ body {
   animation: ambientGlow 12s ease-in-out infinite;
 }
 
-/* CONTENT WIDTH CONTROL */
+/* CONTENT WIDTH */
 body > *:not(.overlay) {
   max-width: 720px;
   margin-left: auto;
@@ -26,7 +29,7 @@ body > *:not(.overlay) {
 }
 
 /* ===============================
-   BACKGROUND / DISCO LIGHTING
+   BACKGROUND
 ================================ */
 .overlay img {
   position: fixed;
@@ -60,46 +63,32 @@ body > *:not(.overlay) {
 /* ===============================
    TYPOGRAPHY
 ================================ */
-h1, h2, h3 {
- h1, h2, h3 {
-  font-family: 'Inter Tight', sans-serif;
-  letter-spacing: 0.12em;
-}
-
 h1 {
   font-weight: 700;
-  font-size: clamp(2.1rem, 5vw, 2.8rem);
+  font-size: clamp(2.2rem, 5vw, 3rem);
   text-transform: uppercase;
+  letter-spacing: 0.14em; /* ONLY HERE */
   margin: 0.6em 0;
   text-shadow:
-    0 0 6px rgba(255,215,150,0.5),
-    0 0 16px rgba(255,150,200,0.35);
+    0 0 8px rgba(255,215,150,0.6),
+    0 0 20px rgba(255,150,200,0.4);
 }
 
 /* TAGLINES */
-.details p {
-  font-size: 1.1rem;
-  letter-spacing: 0.04em;
-}
-
 .tagline {
-  font-size: 0.9rem;
-  font-style: normal;
-  letter-spacing: 0.06em;
-  opacity: 0.8;
-  margin: 0.35em 0;
+  font-size: 0.95rem;
+  opacity: 0.85;
+  margin: 0.4em 0;
 }
 
-a {
-  letter-spacing: 0.08em;
+/* DETAILS TEXT */
+.details p {
+  font-size: 1.15rem;
+  margin: 0.6em 0;
 }
 
 /* ===============================
-   SECTIONS / PANELS
-================================ */
-
-/* ===============================
-   LINKS
+   LINKS (TEXT LINKS ONLY)
 ================================ */
 a {
   color: #ffd27d;
@@ -114,53 +103,61 @@ a:hover {
 }
 
 /* ===============================
-   CALENDAR BUTTON
+   BUTTONS (LOCKED — DO NOT TOUCH)
 ================================ */
 .calendar-btn {
   display: inline-block;
   margin: 1.2em auto;
-  padding: 12px 22px;           /* ⬅ smaller */
+  padding: 12px 22px;
   background: linear-gradient(135deg, #ffd27d, #ff9fcf);
   color: #2b153f;
   text-decoration: none;
   border-radius: 999px;
-  font-weight: 700;
-  letter-spacing: 0.1em;        /* ⬅ tighter */
+  font-weight: 600;
+  font-size: 0.9rem;
+  letter-spacing: 0.06em;  /* EXPLICIT */
   text-transform: uppercase;
   box-shadow: 0 8px 24px rgba(255,159,207,0.3);
   transition: all 0.25s ease;
-  font-size: 0.85rem;           /* ⬅ smaller text */
+  font-family: 'Inter Tight', system-ui, sans-serif; /* locked */
 }
 
 .calendar-btn:hover {
   transform: translateY(-2px);
   box-shadow: 0 12px 32px rgba(255,159,207,0.45);
 }
-/* CONTACT LINKS SPACING */
+
+/* ===============================
+   SECTIONS
+================================ */
+.details {
+  margin-top: 1.5em;
+}
+
+.music-section,
+.contact-section {
+  margin-top: 2em;
+}
+
 .contact-section {
   font-size: 1.05rem;
 }
+
 /* ===============================
-   MOBILE TUNING
+   MOBILE
 ================================ */
 @media (max-width: 600px) {
   body {
     padding: 1.25em;
   }
 
-  .tagline,
-  .details p {
-  font-size: 1.15rem;        /* ⬅ slightly bigger */
-  margin: 0.6em 0;
-}
   .calendar-btn {
     width: 100%;
-    padding: 16px;
   }
 }
 
 /* ===============================
-   SUBTLE DISCO AMBIENCE
+   AMBIENT GLOW
 ================================ */
 @keyframes ambientGlow {
   0%, 100% { background-color: #1a1026; }
