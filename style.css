@@ -77,11 +77,11 @@ h1 {
 
 /* TAGLINES */
 .tagline {
-  font-size: 1.05rem;
+  font-size: 0.95rem;        /* ⬅ smaller */
   font-style: italic;
-  letter-spacing: 0.05em;
-  opacity: 0.9;
-  margin-bottom: 1.4em;
+  letter-spacing: 0.04em;
+  opacity: 0.85;
+  margin: 0.4em 0;           /* ⬅ tighter spacing */
 }
 
 /* ===============================
@@ -127,10 +127,9 @@ a:hover {
   box-shadow: 0 12px 32px rgba(255,159,207,0.45);
 }
 /* CONTACT LINKS SPACING */
-.contact-section a {
-  margin: 0 0.5em;
+.contact-section {
+  font-size: 1.05rem;
 }
-
 /* ===============================
    MOBILE TUNING
 ================================ */
@@ -140,12 +139,10 @@ a:hover {
   }
 
   .tagline,
-  .details p,
-  .music-section,
-  .contact-section {
-    font-size: 1rem;
-  }
-
+  .details p {
+  font-size: 1.15rem;        /* ⬅ slightly bigger */
+  margin: 0.6em 0;
+}
   .calendar-btn {
     width: 100%;
     padding: 16px;
