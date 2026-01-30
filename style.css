@@ -1,10 +1,9 @@
 body {
   margin: 0;
-  font-family: 'Cormorant', serif;
+  font-family: Arial, Helvetica, sans-serif;
   color: #ffffff;
   text-align: center;
   background: #123456;
-  text-transform: lowercase;
   overflow-x: hidden;
   padding: 1.5em;
 }
@@ -22,15 +21,19 @@ body {
 }
 
 /* HEADINGS */
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+}
+
 h1 {
   font-size: 2.2em;
   margin: 0.4em 0;
-  font-weight: bold;
 }
 
-/* CAPTION / TAGLINE */
+/* TAGLINE */
 .tagline {
-  font-style: italic;
   margin-bottom: 1.5em;
   font-size: 1.1em;
 }
@@ -43,15 +46,14 @@ h1 {
 
 /* LINKS */
 a {
-  color: #ffffff !important;
-  font-weight: bold !important;
-  font-style: italic !important;
-  text-decoration: underline !important;
+  color: #ffffff;
+  font-weight: 600;
+  text-decoration: underline;
   word-break: break-word;
 }
 
 a:hover {
-  color: #ffd633 !important;
+  color: #e0e0e0;
 }
 
 /* FORM */
@@ -68,13 +70,8 @@ a:hover {
   border-radius: 12px;
 }
 
-/* MUSIC SECTION */
-.music-section {
-  margin-top: 2em;
-  font-size: 1.1em;
-}
-
-/* CONTACT */
+/* MUSIC + CONTACT */
+.music-section,
 .contact-section {
   margin-top: 2em;
   font-size: 1.1em;
@@ -99,14 +96,4 @@ a:hover {
   body {
     padding: 1em;
   }
-}
-/* GLOW EFFECT */
-.glow {
-  text-shadow: 0 0 8px #ffd633, 0 0 16px #ffcc00, 0 0 24px #ff9900;
-  animation: glowPulse 2.5s infinite alternate;
-}
-
-@keyframes glowPulse {
-  from { text-shadow: 0 0 8px #ffd633, 0 0 16px #ffcc00, 0 0 24px #ff9900; }
-  to   { text-shadow: 0 0 4px #ffcc00, 0 0 12px #ffd633, 0 0 20px #ff6600; }
 }
