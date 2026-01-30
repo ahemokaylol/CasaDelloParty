@@ -77,7 +77,7 @@ h1 {
 
 /* TAGLINES */
 .tagline {
-  font-size: 0.95rem;        /* ⬅ smaller */
+  font-size: 0.8rem;        /* ⬅ smaller */
   font-style: italic;
   letter-spacing: 0.04em;
   opacity: 0.85;
