@@ -75,16 +75,17 @@ body > *:not(.overlay) {
    TYPOGRAPHY
 ================================ */
 h1 {
-  font-weight: 700;
-  font-size: clamp(2.2rem, 5vw, 3rem);
+  font-family: 'Stint Ultra Condensed', sans-serif;
+  font-weight: 400;
+  font-size: clamp(2.8rem, 6vw, 4rem);
   text-transform: uppercase;
-  letter-spacing: 0.14em; /* ONLY HERE */
-  margin: 0.6em 0;
+  letter-spacing: 0.12em; /* keep some air or it looks crushed */
+  margin: 0.5em 0;
+  line-height: 0.95;
   text-shadow:
     0 0 8px rgba(255,215,150,0.6),
     0 0 20px rgba(255,150,200,0.4);
 }
-
 /* TAGLINES */
 .tagline {
   font-size: 0.95rem;
