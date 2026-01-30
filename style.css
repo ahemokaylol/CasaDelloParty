@@ -83,10 +83,13 @@ h1 {
     0 0 8px rgba(255,215,150,0.6),
     0 0 20px rgba(255,150,200,0.4);
 
-  position: sticky;   /* 🔑 */
-  top: 1rem;          /* distance from top */
+  position: sticky;
+  top: 1rem;
   z-index: 2;
   max-width: none;
+
+  white-space: nowrap;      /* 🔒 no wrapping */
+  display: inline-block;    /* required for nowrap to behave */
 }
 
 .tagline {
