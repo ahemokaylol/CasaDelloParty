@@ -108,24 +108,24 @@ a:hover {
 ================================ */
 .calendar-btn {
   display: inline-block;
-  margin: 2em auto;
-  padding: 16px 30px;
+  margin: 1.2em auto;
+  padding: 12px 22px;           /* ⬅ smaller */
   background: linear-gradient(135deg, #ffd27d, #ff9fcf);
   color: #2b153f;
   text-decoration: none;
   border-radius: 999px;
   font-weight: 700;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.1em;        /* ⬅ tighter */
   text-transform: uppercase;
-  box-shadow: 0 10px 30px rgba(255,159,207,0.35);
+  box-shadow: 0 8px 24px rgba(255,159,207,0.3);
   transition: all 0.25s ease;
+  font-size: 0.85rem;           /* ⬅ smaller text */
 }
 
 .calendar-btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 14px 40px rgba(255,159,207,0.5);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 32px rgba(255,159,207,0.45);
 }
-
 /* CONTACT LINKS SPACING */
 .contact-section a {
   margin: 0 0.5em;
